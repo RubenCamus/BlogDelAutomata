@@ -1,17 +1,50 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+const pageTitle = "Sobre mí";
+const identity = {
+    firstName: "Ruben",
+    country: "España",
+    hobbies: ["Impresión 3D", "Gym", "Piano"]
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Astro"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
-<Layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+</head>
+<body>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
-	<h1>Sobre mi</h1>
-    <body>
-        <p>Este es un blog para ir públicando las cosas que voy aprendiendo sobre desarrollo web, también subir contenido sobre otros de mis hobbies nicho.</p>
-        <br>
-        <p>El próposito es mostrar que se puede llegar a ser un desarrollador empezando desde 0 y que esto sirva de motivación y ayuda para más personas.</p>
-    </body>
-    <Welcome />
-</Layout>
+	<h1>{pageTitle}</h1>
+    <p>Este es un blog para ir públicando las cosas que voy aprendiendo sobre desarrollo web, también subir contenido sobre otros de mis hobbies nicho.</p>
+    <br>
+    <p>El próposito es mostrar que se puede llegar a ser un desarrollador empezando desde 0 y que esto sirva de motivación y ayuda para más personas.</p>
+    <br>
+    <p>Esto es alguna información sobre mí</p>
+    <ul>
+        <li>Mi nombre es {identity.firstName}</li>
+        <li>Vivo en {identity.country} y alguno de mis hobbies son {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+    </ul>
+    <p> Mis habilidades son las siguientes </p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+
+    {happy && <p>I am happy to be learning Astro!</p>}
+
+    {finished && <p>I finished this tutorial!</p>}
+
+    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+</body>
+</html>
+
+
