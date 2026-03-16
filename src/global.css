@@ -1,0 +1,11 @@
+h1 {
+		font-weight: bolder;
+		font-size:45px;
+}
+blockquote { 
+		border-left: solid rgb(68, 68, 68);
+		padding: 2rem;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }

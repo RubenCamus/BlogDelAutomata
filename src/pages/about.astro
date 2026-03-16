@@ -1,4 +1,5 @@
 ---
+import Header from "../components/header.astro";
 const pageTitle = "Sobre mí";
 const identity = {
     firstName: "Ruben",
@@ -21,9 +22,7 @@ const goal = 3;
     <title>{pageTitle}</title>
 </head>
 <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
+    <Header></Header>
 	<h1>{pageTitle}</h1>
     <p>Este es un blog para ir públicando las cosas que voy aprendiendo sobre desarrollo web, también subir contenido sobre otros de mis hobbies nicho.</p>
     <br>
