@@ -12,6 +12,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Astro"];
 const happy = true;
 const finished = false;
 const goal = 3;
+
+import '../global.css'
 ---
 
 <!DOCTYPE html>
@@ -37,12 +39,6 @@ const goal = 3;
     <ul>
         {skills.map((skill) => <li>{skill}</li>)}
     </ul>
-
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </body>
 </html>
 

@@ -3,14 +3,29 @@
 
 const nombre  = "Ruben C";
 
-const {title, description, date, link} = Astro.props;
+const {title, description, date, slug, author} = Astro.props;
+
+import '../global.css';
 ---
+<div class="postcard">
+<article>
 
-<h2>
-    {title}
+<h2 class="post-title">
+    <a href={slug}> {title}</a>
 </h2>
-
 <p>
     {description}
 </p>
-<time>{date}</time>
+<a href={slug}>Leer más</a>
+<p>{author}</p>
+<time class="post-date">{date}</time>
+</article>
+</div>
+<style>
+    .postcard {
+        border: solid 2px;
+        border-color: black;
+        width: fit-content;
+        padding: 4px;
+    }
+</style>

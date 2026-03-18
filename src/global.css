@@ -6,6 +6,30 @@ blockquote {
 		border-left: solid rgb(68, 68, 68);
 		padding: 2rem;
 }
+h2 { 
+	font-size: 20px;
+}
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+
+.postcards > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.postcards {
+  width: 600px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.postcards div {
+	margin: 30px;
+}
+
