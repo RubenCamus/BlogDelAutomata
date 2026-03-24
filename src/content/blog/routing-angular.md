@@ -1,10 +1,11 @@
 ---
-layout: '../../layouts/Layout.astro
+layout: '../../layouts/Layout.astro'
 title: 'Routing con Angular'
 description: "Aprendiendo a hacer routing básico con Angular"
 date: '16 Marzo 2026'
 author: 'Ruben C'
 ---
+
 Una de las características principales de **Angular** es el **Routing**, que sirve para crear una **SPA** (Single-Page Application) de forma optimizada.
 
 > En una **MPA** (Multi-Page Application) cuando pulsamos un enlace realiza una petición al servidor y carga una página totalmente nueva.

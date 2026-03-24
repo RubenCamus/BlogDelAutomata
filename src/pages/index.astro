@@ -4,8 +4,9 @@ import Footer from "../components/footer.astro";
 import PostCard from "../components/postCard.astro";
 import { getCollection } from "astro:content";
 import '../global.css'
-
+import '../index.js';
 const posts = await getCollection('blog');
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,27 @@ const posts = await getCollection('blog');
 	<title>Blog del Automata</title>
 </head>
 <body>
-<Header></Header>
-
-<Footer></Footer>
+	<div class="center">
+		<Header></Header>
+		<h1 >Full Stack Developer</h1>
+		<h2 onclick="copyMail()" class="mail">Rubencamus[at]hotmail[dot]com</h2>
+	</div>
+	<div class="projects">
+		<div class="project-box">
+			<h2> Pokémon Wordle</h2>
+			<a  href="https://www.rubencamus.com"> <img class="projectVideo" src="/WordleVideo.gif" alt="Wordle Web"></a>
+			<p> Este es mi clon de Wordle, con la 1a generación de Pokémon. En este proyecto Full Stack utilizo 
+				Node.Js y Express para el backend realizando una REST API conectada a MongoDB.
+				Ésta se utiliza para la validación de las mecánicas y funciones del juego en el servidor.
+			</p>
+		</div>
+	</div>
+	<Footer></Footer>
+	<script>
+		const mailButton = document.querySelector('.mail');
+		mailButton.addEventListener('click', function() { 
+			navigator.clipboard.writeText('rubencamus@hotmail.com');
+			alert('Text copied to clipboard');
+		})
+	</script>
 </body>
